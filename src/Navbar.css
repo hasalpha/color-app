@@ -1,0 +1,17 @@
+.Navbar{
+    display: flex;
+    flex-direction: row;
+}
+
+.Navbar .logo{
+    background-color: grey;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+}
