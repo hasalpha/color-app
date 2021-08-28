@@ -34,7 +34,7 @@ class Navbar extends Component{
                 <div className="logo">
                     <a href="/">React Color Palette</a>
                 </div>
-                <p>Level: {level}</p>
+                <p className="level">Level: {level}</p>
                 <div className="slider-div">
                     <Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={changeLevel} />
                 </div>
@@ -54,7 +54,7 @@ class Navbar extends Component{
                     ContentProps={{"aria-describedby":"message-id"}}
                     action={
                         <IconButton>
-                            <CloseIcon onClick={this.handleClick} color='inherit' key='close' aria-label='close' />
+                            <CloseIcon onClick={this.handleClick} style={{fill:'white'}} key='close' aria-label='close' />
                         </IconButton>
                     }
                 >

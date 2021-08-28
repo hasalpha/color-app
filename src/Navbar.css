@@ -1,10 +1,15 @@
 .Navbar{
     display: flex;
     flex-direction: row;
+    height: 2em;
+}
+
+.level{
+    margin:auto 1rem;
 }
 
 .Navbar .logo{
-    background-color: grey;
+    background-color: #eec0a5;
     font-weight: 600;
     text-align: center;
     display: flex;
