@@ -1,14 +1,26 @@
-import React, { Component } from 'react'
-import {NavLink} from 'react-router-dom';
+import React, { Component } from 'react';
+import MiniPalette from './MiniPalette';
+import { withStyles } from '@material-ui/styles';
 
-export default class PaletteList extends Component {
+const styles = {
+    main:{
+        backgroundColor: 'hsl(250, 100%, 70%)',
+        "& h1":{
+            margin:'0'
+        }
+    }
+}
+
+class PaletteList extends Component {
     render() {
-        const {palettes} = this.props;
+        const {palettes, classes} = this.props;
         return (
-            <div>
+            <div className={classes.main}>
                 <h1>Palettes!</h1>
-                {palettes.map(palette => <p><NavLink key={palette.id} exact to={`palette/${palette.id}`}>{palette.paletteName}</NavLink></p>)} 
+                {palettes.map(palette => <MiniPalette {...palette}/>)} 
             </div>
         )
     }
 };
+
+export default withStyles(styles)(PaletteList)
