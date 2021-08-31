@@ -17,7 +17,7 @@ class PaletteList extends Component {
         return (
             <div className={classes.main}>
                 <h1>Palettes!</h1>
-                {palettes.map(palette => <MiniPalette {...palette}/>)} 
+                <div>{palettes.map(palette => <MiniPalette {...palette}/>)}</div>
             </div>
         )
     }
